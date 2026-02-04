@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #f0f4ff, #66b2b2);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #1f2937;
+    display: flex;
+    justify-content: center; /* PUSATKAN HORIZONTAL */
+    align-items: flex-start;  /* TIDAK perlu tengah vertikal */
+    min-height: 100vh;
+    padding-top: 35px;
+}
+
+.container {
+    margin: 0 auto; /* <-- tambahkan ini */
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+h2 {
+    text-align: center;
+    color: #66b2b2;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.label {
+    font-weight: bold;
+    display: inline-block;
+    width: 160px;
+}
+
+select,
+input[type="file"] {
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: #1f2937;
+    box-sizing: border-box;
+}
+
+select:focus,
+input[type="file"]:focus {
+    border-color: #121212;
+    outline: none;
+}
+
+.qris-img {
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #66b2b2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #579d9d;
+    transform: translateY(-1px);
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Geser logo ke kiri */
+    gap: 20px;
+    background-color: #e4f0f0;
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-logo img {
+    width: 120px; /* Perbesar logo */
+    height: auto;
+    border-radius: 8px;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #1f3537;
+    text-align: center;
+}

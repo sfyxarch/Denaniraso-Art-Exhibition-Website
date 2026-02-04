@@ -1,0 +1,446 @@
+/* style.css */
+
+:root {
+    --primary-color: #006666; /* Warna utama: Teal gelap */
+    --accent-color: #b2d8d8; /* Warna aksen: Teal terang */
+    --text-color: #333;
+    --light-bg: #ffffff; /* Latar belakang menjadi putih */
+    --white-bg: #ffffff;
+    --shadow-light: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white-bg);
+    padding: 18px 40px;
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    border-radius: 0;
+    max-height: 50px;
+}
+
+.pameran-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+.pameran-name span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.nav-buttons .pesan-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-buttons .pesan-btn:hover {
+    background: #004d4d; /* Sedikit lebih gelap dari primary-color */
+}
+
+.hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #222;
+}
+
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slider img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(0,0,0,0.35);
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+.hero-desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 15px;
+    color: #eee;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+.pemisah {
+    border: none;
+    border-top: 2px solid var(--primary-color);
+    margin: 50px auto 40px auto;
+    width: 70%;
+    opacity: 0.7;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: 0 auto 60px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.info-block {
+    background: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    padding: 35px 30px;
+    max-width: 450px;
+    flex: 1 1 300px;
+    min-width: 280px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+.info-content p {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.info-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+}
+
+.info-content a:hover {
+    color: #004d4d; /* Warna hover sesuai primary-color gelap */
+    border-color: var(--primary-color);
+}
+
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto 70px auto;
+    padding: 0 20px;
+}
+
+.gallery-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #eee;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 102, 102, 0.15); /* Menggunakan nilai RGB dari primary-color */
+}
+
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.newsletter {
+    background: #004d4d; /* Warna lebih gelap untuk newsletter */
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 280px;
+    max-width: 100%;
+}
+
+.newsletter button {
+    background: var(--accent-color); /* Tombol subscribe menggunakan warna aksen */
+    color: var(--primary-color); /* Warna teks tombol subscribe */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+}
+
+.newsletter button:hover {
+    background: #99c2c2; /* Sedikit lebih gelap dari accent-color */
+    color: #003333; /* Warna teks hover tombol subscribe */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 60px 20px 60px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-section.logo img {
+    margin-bottom: 20px;
+    border-radius: 0;
+    max-width: 150px;
+}
+
+.footer-section .icons a {
+    color: #fff; /* Warna ikon menjadi putih */
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+.footer-section .icons a img {
+    filter: brightness(0) invert(1); /* Mengubah ikon menjadi putih */
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.footer-section .icons a:hover {
+    transform: translateY(-3px);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    
+}
+.footer-section ul li:hover {
+    color: #fff;
+}
+
+
+.footer-section h4 {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    color: var(--accent-color); /* Warna heading footer menggunakan warna aksen */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.contact-list .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.contact-list .contact-item img {
+    filter: brightness(0) invert(1); /* Mengubah ikon menjadi putih */
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.footer-bottom {
+    background: #004d4d; /* Warna lebih gelap untuk footer bawah */
+    text-align: center;
+    padding: 18px 0;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 0;
+}
+
+/* Penambahan untuk embedded map */
+.map-container {
+    width: 100%;
+    height: 200px; /* Tinggi peta */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .pameran-name {
+        font-size: 1.5rem;
+    }
+    .nav-buttons .pesan-btn {
+        padding: 8px 15px;
+        margin-left: 8px;
+        font-size: 0.9rem;
+    }
+    .hero-text {
+        font-size: 2rem;
+        padding: 20px 25px;
+    }
+    .hero-desc {
+        font-size: 1rem;
+    }
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+    .info-block {
+        width: 90%;
+        max-width: none;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .gallery-grid img {
+        height: 150px;
+    }
+    .footer-content {
+        flex-direction: column;
+        padding: 30px 20px 15px 20px;
+        text-align: center;
+        gap: 25px;
+    }
+    .footer-section {
+        min-width: unset;
+        width: 100%;
+    }
+    .footer-section.logo img {
+        margin: 0 auto 20px auto;
+    }
+    .footer-section .icons {
+        text-align: center;
+    }
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

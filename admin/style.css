@@ -1,0 +1,239 @@
+/* General reset & font */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #b2d8d8;
+    color: #004c4c;
+    text-align: center;
+}
+
+/* Judul Halaman */
+h1, h2 {
+    color: #004c4c;
+    border-bottom: 2px solid #66b2b2;
+    padding-bottom: 10px;
+    margin-bottom: px;
+}
+
+/* Tombol Aksi */
+a.button,
+input[type="submit"],
+input[type="button"],
+button.btn {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button.btn:hover {
+    background-color: #006666;
+}
+
+/* Form & Table Layout Center */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #66b2b2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,76,76,0.1);
+}
+
+/* Form field group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #004c4c;
+}
+
+.form-group input,
+.form-group select {
+    width: 96%;
+    padding: 8px 12px;
+    border: 1px solid #66b2b2;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Tombol submit */
+form button,
+form input[type="submit"],
+form input[type="button"] {
+    background-color: #66b2b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* Hapus align-self supaya tombol bisa sejajar */
+    /* align-self: flex-end; */
+    margin-right: 10px; /* kasih jarak antar tombol */
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: #006666;
+}
+
+/* Table Layout */
+table {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #66b2b2;
+}
+
+table th {
+    background-color: #66b2b2;
+    color: #ffffff;
+}
+
+table tr:nth-child(even) {
+    background-color: #e6f2f2;
+}
+
+/* Form Table Layout */
+form table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #66b2b2;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+form table td {
+    padding: 10px;
+    color: #004c4c;
+}
+
+/* Image thumbnail preview */
+.preview-img {
+    max-width: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.preview-img:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay for popup image */
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid white;
+    border-radius: 8px;
+}
+
+.overlay:target {
+    display: flex;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+}
+/* Responsive spacing */
+@media (max-width: 768px) {
+    table, form table {
+        width: 100%;
+    }
+
+    .overlay img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}
+/* Welcome container khusus halaman utama */
+.welcome-container {
+    max-width: 600px;
+    margin: 120px auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.welcome-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}/* Tombol form sejajar */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}.logout-top-right {
+    all: unset;      /* Reset semua style yang diwariskan */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    padding: 10px;
+    font-family: Arial, sans-serif; /* atur ulang font */
+}
+
+.logout-top-right button {
+    all: unset;
+    cursor: pointer;
+    background-color: #66b2b2;
+    padding: 8px 9px;
+    text-align: center;
+}
+
